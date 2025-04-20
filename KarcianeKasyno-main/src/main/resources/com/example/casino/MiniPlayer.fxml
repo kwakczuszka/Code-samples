@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="199.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: d7d9db; -fx-border-radius: 10; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.casino.Controllers.MiniPlayerController">
+   <children>
+      <Label fx:id="username" alignment="CENTER" prefHeight="64.0" prefWidth="196.0" style="-fx-border-color: dark grey; -fx-border-image-width: 3;" text="Label">
+         <font>
+            <Font name="Microsoft YaHei Bold" size="21.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" startX="-100.0" strokeWidth="2.0" />
+      <ImageView fitHeight="195.0" fitWidth="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/avatar.png" />
+         </image>
+      </ImageView>
+      <Line endX="100.0" startX="-100.0" strokeWidth="2.0" />
+      <ImageView fx:id="status" fitHeight="127.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="statusLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="172.0" text="Label">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+   </children>
+</VBox>

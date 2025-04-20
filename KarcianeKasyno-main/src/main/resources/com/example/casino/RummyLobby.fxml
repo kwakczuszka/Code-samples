@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.casino.Controllers.RummyLobbyController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="83.0" opacity="0.76" stroke="BLACK" strokeType="INSIDE" width="1258.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="83.0" layoutY="667.0" opacity="0.76" stroke="BLACK" strokeType="INSIDE" width="1258.0" />
+        <Button fx:id="LogoutButton" layoutX="906.0" layoutY="682.0" mnemonicParsing="false" onAction="#leaveGame" prefHeight="52.0" prefWidth="143.0" style="-fx-background-color: transparent; -fx-border-color: red; -fx-border-width: 3; -fx-border-radius: 1;" text="Leave" textFill="#d71a1a">
+         <font>
+            <Font name="Microsoft YaHei Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label lineSpacing="10.0" prefHeight="74.0" prefWidth="1257.0" text=" GAME LOBBY" textFill="#e4e4e4">
+         <font>
+            <Font name="Microsoft YaHei Bold" size="34.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding></Label>
+      <Label fx:id="uuid" layoutX="366.0" layoutY="17.0" onMouseClicked="#copyToClipboard" prefHeight="42.0" prefWidth="508.0" text="Label" textFill="#d7d7d7">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <HBox fx:id="playersContainer" alignment="CENTER" layoutX="106.0" layoutY="111.0" prefHeight="538.0" prefWidth="1054.0" spacing="10.0" />
+      <Button fx:id="inviteButton" layoutX="1042.0" layoutY="12.0" mnemonicParsing="false" onAction="#copyToClipboard" prefHeight="39.0" prefWidth="183.0" style="-fx-background-color: transparent; -fx-border-color: lightgreen; -fx-border-radius: 0.3; -fx-border-width: 2;" text="Copy Code" textFill="#5ddc13">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Microsoft YaHei" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="ReadyButton" layoutX="1081.0" layoutY="682.0" mnemonicParsing="false" onAction="#ready" prefHeight="52.0" prefWidth="143.0" style="-fx-background-color: transparent; -fx-border-width: 3; -fx-border-color: lightgreen; -fx-border-radius: 1;" text="Ready" textFill="#39df1f">
+         <font>
+            <Font name="Microsoft YaHei Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+    </children>
+</AnchorPane>

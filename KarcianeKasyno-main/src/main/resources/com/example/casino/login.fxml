@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginButton" prefHeight="750.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.casino.Controllers.LoginController">
+    <children>
+        <HBox prefHeight="751.0" prefWidth="1254.0">
+            <children>
+                <VBox alignment="TOP_CENTER" prefHeight="751.0" prefWidth="390.0" style="-fx-background-color: #fcfcfc;">
+                    <children>
+                        <ImageView fitHeight="170.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/logo.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="30.0" top="30.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="390.0" text="Zaloguj się">
+                            <font>
+                                <Font name="Microsoft YaHei Bold" size="24.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="20.0" top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label prefHeight="17.0" prefWidth="320.0" text="Nazwa użytkownika" textFill="#545454">
+                            <font>
+                                <Font name="Microsoft YaHei UI Bold" size="15.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="loginField" maxWidth="-Infinity" onAction="#onEnter" prefHeight="40.0" prefWidth="320.0">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin></TextField>
+                        <Label prefHeight="17.0" prefWidth="319.0" text="Hasło" textFill="#545454">
+                            <VBox.margin>
+                                <Insets bottom="5.0" top="20.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Microsoft YaHei UI Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <PasswordField fx:id="passwordField" maxWidth="-Infinity" onAction="#onEnter" prefHeight="40.0" prefWidth="320.0">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </PasswordField>
+                        <Label fx:id="Err" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="321.0" text="BŁĄD LOGOWANIA" textFill="#d71a1a">
+                            <VBox.margin>
+                                <Insets top="30.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#login" prefHeight="67.0" prefWidth="118.0" text="Zaloguj">
+                            <VBox.margin>
+                                <Insets top="80.0" />
+                            </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                        <HBox alignment="TOP_CENTER" prefHeight="32.0" prefWidth="390.0">
+                            <children>
+                                <Label prefHeight="32.0" prefWidth="155.0" text="Nie masz jeszcze konta?">
+                                    <font>
+                                        <Font name="Microsoft YaHei UI" size="13.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Label>
+                                <Button mnemonicParsing="false" onAction="#goToRegister" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: transparent;" text="Zarejestruj się">
+                                    <font>
+                                        <Font name="Microsoft YaHei UI Bold" size="14.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="-3.0" />
+                                    </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </VBox>
+                <StackPane alignment="TOP_RIGHT" prefHeight="150.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fitHeight="751.0" fitWidth="864.0" pickOnBounds="true" smooth="false">
+                            <image>
+                                <Image url="@../../../images/gif.gif" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="minimize" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="21.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="_" textFill="#bfb1b1">
+                            <StackPane.margin>
+                                <Insets right="29.0" />
+                            </StackPane.margin>
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                            <padding>
+                                <Insets top="-7.0" />
+                            </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </Button>
+                        <Button fx:id="exit" graphicTextGap="2.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="21.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="x" textFill="#bfb1b1">
+                            <font>
+                                <Font name="System Bold" size="21.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="-3.0" top="-3.0" />
+                            </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </Button>
+                    </children>
+                </StackPane>
+
+
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

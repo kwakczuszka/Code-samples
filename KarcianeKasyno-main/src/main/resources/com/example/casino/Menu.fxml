@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.casino.Controllers.MenuController">
+   <children>
+      <ImageView fitHeight="840.0" fitWidth="1265.0" layoutX="-6.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/menuBackground.jpg" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER" prefHeight="750.0" prefWidth="1250.0">
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="625.0">
+               <children>
+                  <ImageView fitHeight="510.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/card_back_red.png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff4321" height="416.0" stroke="BLACK" strokeType="INSIDE" width="264.0" />
+                  <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="93.0" prefWidth="265.0" text="Poker" textAlignment="CENTER" StackPane.alignment="TOP_CENTER">
+                     <font>
+                        <Font name="Microsoft YaHei" size="60.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="180.0" right="180.0" top="170.0" />
+                     </StackPane.margin>
+                  </Label>
+                  <Button fx:id="CreateButton" alignment="CENTER" mnemonicParsing="false" onAction="#createPokerGame" prefHeight="48.0" prefWidth="265.0" style="-fx-background-radius: 30;" text="Stwórz grę" StackPane.alignment="TOP_CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="185.0" right="185.0" top="500.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="JoinButton" mnemonicParsing="false" onAction="#joinPokerGame" prefHeight="48.0" prefWidth="300.0" style="-fx-background-radius: 30;" text="Dołącz" StackPane.alignment="TOP_CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="185.0" right="185.0" top="390.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="gameID" alignment="CENTER" prefColumnCount="0" prefHeight="52.0" prefWidth="98.0" style="-fx-background-radius: 20;" StackPane.alignment="TOP_CENTER">
+                     <StackPane.margin>
+                        <Insets left="185.0" right="185.0" top="335.0" />
+                     </StackPane.margin>
+                  </TextField>
+                  <Label alignment="CENTER" prefHeight="80.0" prefWidth="260.0" text="Podaj kod gry aby dołączyć:" textAlignment="CENTER" wrapText="true" StackPane.alignment="TOP_CENTER">
+                     <font>
+                        <Font name="Microsoft YaHei" size="24.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="140.0" right="140.0" top="260.0" />
+                     </StackPane.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="617.0" text="Lub utwórz nową gre" StackPane.alignment="TOP_CENTER">
+                     <font>
+                        <Font name="Microsoft YaHei" size="25.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="170.0" right="170.0" top="455.0" />
+                     </StackPane.margin>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="625.0">
+               <children>
+                  <ImageView fitHeight="518.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/card_back_blue.png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff" height="416.0" stroke="BLACK" strokeType="INSIDE" width="267.0" />
+                  <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="93.0" prefWidth="265.0" text="Remik" textAlignment="CENTER" StackPane.alignment="TOP_CENTER">
+                     <font>
+                        <Font name="Microsoft YaHei" size="60.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="180.0" right="180.0" top="170.0" />
+                     </StackPane.margin>
+                  </Label>
+                  <Button fx:id="CreateButton1" alignment="CENTER" mnemonicParsing="false" onAction="#createRummyGame" prefHeight="48.0" prefWidth="265.0" style="-fx-background-radius: 30;" text="Stwórz grę" StackPane.alignment="TOP_CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="185.0" right="185.0" top="500.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="JoinButton1" mnemonicParsing="false" onAction="#joinRummyGame" prefHeight="48.0" prefWidth="300.0" style="-fx-background-radius: 30;" text="Dołącz" StackPane.alignment="TOP_CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="185.0" right="185.0" top="390.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="gameID1" alignment="CENTER" prefColumnCount="0" prefHeight="52.0" prefWidth="98.0" style="-fx-background-radius: 20;" StackPane.alignment="TOP_CENTER">
+                     <StackPane.margin>
+                        <Insets left="185.0" right="185.0" top="335.0" />
+                     </StackPane.margin>
+                  </TextField>
+                  <Label alignment="CENTER" prefHeight="80.0" prefWidth="260.0" text="Podaj kod gry aby dołączyć:" textAlignment="CENTER" wrapText="true" StackPane.alignment="TOP_CENTER">
+                     <font>
+                        <Font name="Microsoft YaHei" size="24.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="140.0" right="140.0" top="260.0" />
+                     </StackPane.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="617.0" text="Lub utwórz nową gre" StackPane.alignment="TOP_CENTER">
+                     <font>
+                        <Font name="Microsoft YaHei" size="25.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="170.0" right="170.0" top="455.0" />
+                     </StackPane.margin>
+                  </Label>
+                  <Button fx:id="minimize" alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="21.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="_" textFill="WHITE" StackPane.alignment="TOP_RIGHT">
+                     <font>
+                        <Font name="Algerian" size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets top="-7.0" />
+                     </padding>
+                     <StackPane.margin>
+                        <Insets right="50.0" top="10.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="exit" alignment="TOP_RIGHT" graphicTextGap="2.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="21.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="x" textFill="WHITE" StackPane.alignment="TOP_RIGHT">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="-3.0" top="-3.0" />
+                     </padding>
+                     <StackPane.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </StackPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+      <StackPane layoutY="637.0" prefHeight="113.0" prefWidth="1250.0">
+         <children>
+            <Button fx:id="goToRemikRankingButton" mnemonicParsing="false" onAction="#goToRemikRanking" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="103.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/puchar.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <StackPane.margin>
+                  <Insets left="650.0" />
+               </StackPane.margin>
+            </Button>
+            <Button fx:id="LogoutButton" alignment="CENTER" mnemonicParsing="false" onAction="#LogOut" prefHeight="52.0" prefWidth="91.0" style="-fx-background-radius: 10;" text="Wyloguj się" StackPane.alignment="BOTTOM_CENTER">
+               <StackPane.margin>
+                  <Insets bottom="30.0" />
+               </StackPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="goToPokerRankingButton" mnemonicParsing="false" onAction="#goToPokerRanking" prefHeight="103.0" prefWidth="103.0" style="-fx-background-color: transparent;">
+               <StackPane.margin>
+                  <Insets right="650.0" />
+               </StackPane.margin>
+               <graphic>
+                  <ImageView fitHeight="103.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/puchar.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

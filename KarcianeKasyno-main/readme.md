@@ -1,0 +1,1 @@
+Casino-style multi-player game based on client-server architecture. Documentation available in Polish.

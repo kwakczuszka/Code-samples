@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.casino.Controllers.PokerRankingController">
+   <children>
+      <ImageView fitHeight="840.0" fitWidth="1265.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/menuBackground.jpg" />
+         </image>
+      </ImageView>
+      <VBox alignment="TOP_CENTER" prefHeight="750.0" prefWidth="1260.0" style="-fx-background-radius: 100;" styleClass="mid" stylesheets="@style.css" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label alignment="TOP_CENTER" text="Ranking 10 naljepszych graczy pokera:" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <ListView fx:id="top10poker" prefHeight="357.0" prefWidth="960.0" style="-fx-background-color: transparent;" stylesheets="@style.css">
+               <VBox.margin>
+                  <Insets bottom="45.0" left="45.0" right="45.0" top="40.0" />
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="list-cell" />
+                  <String fx:value="list-view" />
+               </styleClass>
+            </ListView>
+         </children>
+      </VBox>
+      <Button fx:id="minimize" alignment="CENTER" layoutX="1194.0" layoutY="10.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="21.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="_" textFill="WHITE" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Algerian" size="25.0" />
+         </font>
+         <padding>
+            <Insets top="-7.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="exit" alignment="CENTER" graphicTextGap="2.0" layoutX="1212.0" layoutY="7.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="21.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="x" textFill="WHITE" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <padding>
+            <Insets bottom="-3.0" top="-3.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="backButton" layoutX="1162.0" layoutY="676.0" mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <graphic>
+            <ImageView fitHeight="90.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
